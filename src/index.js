@@ -7,6 +7,12 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <p>
+      <a href="https://github.com/Stefka24/weather-react" target="blank">
+        Open source
+      </a>{" "}
+      by Stefka Bodurova
+    </p>
   </React.StrictMode>,
   document.getElementById("root")
 );
