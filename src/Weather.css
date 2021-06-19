@@ -1,0 +1,28 @@
+.Weather h1,
+h4 {
+  color: #596aca;
+  text-decoration: none;
+}
+.Weather form {
+  margin: 20px 0;
+  font-size: 20px;
+}
+.Weather .searchButton {
+  background-color: #596aca;
+  border-radius: 5px;
+  color: white;
+}
+
+.Weather .searchButton:hover {
+  background-color: white;
+  border-radius: 5px;
+  color: #596aca;
+}
+.Weather .todaysDegrees {
+  text-align: right;
+}
+.Weather .weatherIcon {
+  height: 60px;
+  width: 60px;
+  margin: -10px;
+}

@@ -1,13 +1,12 @@
+import React from "react";
 import "./App.css";
-import Search from "./Search";
-import Temperature from "./Temperature";
+import Weather from "./Weather";
 
 export default function App() {
   return (
     <div className="App card framework">
       <div className="card-body">
-        <Temperature />
-        <Search />
+        <Weather />
       </div>
     </div>
   );
