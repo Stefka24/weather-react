@@ -12,6 +12,12 @@ export default function App() {
             <Weather />
           </div>
         </div>
+        <p>
+          <a href="https://github.com/Stefka24/weather-react" target="blank">
+            Open source
+          </a>{" "}
+          by Stefka Bodurova
+        </p>
       </div>
     </div>
   );
