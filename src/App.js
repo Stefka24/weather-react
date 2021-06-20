@@ -9,7 +9,7 @@ export default function App() {
       <div className="container">
         <div className="card framework">
           <div className="card-body">
-            <Weather />
+            <Weather city="Edinburgh" />
           </div>
         </div>
         <p>

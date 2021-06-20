@@ -19,9 +19,6 @@ h4 {
   border-radius: 5px;
   color: #596aca;
 }
-.Weather .todaysDegrees {
-  text-align: right;
-}
 .Weather .weatherIcon {
   height: 60px;
   width: 60px;
