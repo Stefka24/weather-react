@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import CurrentDate from "./CurrentDate";
 
 export default function Weather() {
   const [city, setCity] = useState("Edinburgh");
-  const [name, setName] = useState("Edinburgh");
-  const [currentTemp, setCurrentTemp] = useState(15);
-  const [feelsLike, setFeelsLike] = useState(14);
-  const [icon, setIcon] = useState("01d");
+  const [weatherData, setWeatherData] = useState({ loaded: false });
 
   function updateCity(event) {
     event.preventDefault();
     setCity(event.target.value);
   }
   function showWeather(response) {
-    setName(response.data.name);
-    setCurrentTemp(Math.round(response.data.main.temp));
-    setFeelsLike(Math.round(response.data.main.feels_like));
-    setIcon(response.data.weather[0].icon);
+    setWeatherData({
+      looaded: true,
+      name: response.data.name,
+      date: new Date(response.data.dt * 1000),
+      currentTemp: Math.round(response.data.main.temp),
+      feelsLike: Math.round(response.data.main.feels_like),
+      icon: response.data.weather[0].icon,
+    });
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -30,11 +32,11 @@ export default function Weather() {
       <div className="Temperature">
         <h1>
           <div className="row">
-            <div className="col-6">{name}</div>
+            <div className="col-6">{weatherData.name}</div>
             <div className="col-6 todaysDegrees">
-              {currentTemp} ℃
+              {weatherData.currentTemp} ℃
               <img
-                src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+                src={`http://openweathermap.org/img/wn/${weatherData.icon}@2x.png`}
                 alt="weather"
                 className="weatherIcon"
               />
@@ -43,8 +45,12 @@ export default function Weather() {
         </h1>
         <h4>
           <div className="row">
-            <div className="col-6">19th June 10:20am</div>
-            <div className="col-6 todaysDegrees">Feels like {feelsLike}℃</div>
+            <div className="col-6">
+              <CurrentDate date={weatherData.date} />
+            </div>
+            <div className="col-6 todaysDegrees">
+              Feels like {weatherData.feelsLike}℃
+            </div>
           </div>
         </h4>
       </div>
@@ -57,10 +63,14 @@ export default function Weather() {
       <input type="submit" value="Search" className="searchButton" />
     </form>
   );
-  return (
-    <div>
-      {weather}
-      {form}
-    </div>
-  );
+  if (weatherData.loaded) {
+    return (
+      <div>
+        {weather}
+        {form}
+      </div>
+    );
+  } else {
+    return "Loading";
+  }
 }
