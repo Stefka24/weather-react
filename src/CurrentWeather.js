@@ -1,5 +1,6 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
+import "./CurrentWeather.css";
 
 export default function CurrentWeather(props) {
   return (
