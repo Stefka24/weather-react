@@ -9,7 +9,7 @@ export default function Weather(props) {
 
   function showWeather(response) {
     setWeatherData({
-      looaded: true,
+      loaded: true,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       currentTemp: Math.round(response.data.main.temp),
