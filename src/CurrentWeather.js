@@ -1,6 +1,7 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
 import "./CurrentWeather.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function CurrentWeather(props) {
   return (
@@ -10,11 +11,7 @@ export default function CurrentWeather(props) {
           <div className="col-6">{props.data.city}</div>
           <div className="col-6 todaysDegrees">
             {props.data.currentTemp} ℃
-            <img
-              src={`http://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
-              alt="weather"
-              className="weatherIcon"
-            />
+            <WeatherIcon code={props.data.icon} />
           </div>
         </div>
       </h1>
