@@ -3,6 +3,9 @@ h4 {
   color: #596aca;
   text-decoration: none;
 }
+.CurrentWeather a {
+  text-decoration: none;
+}
 
 .CurrentWeather .todaysDegrees {
   text-align: right;
@@ -10,5 +13,5 @@ h4 {
 .CurrentWeather canvas {
   height: 50px;
   width: 50px;
-  margin: -10px 2px;
+  margin: -10px 2px -10px 7px;
 }
