@@ -32,7 +32,7 @@ export default function CurrentDate(props) {
 
   return (
     <div>
-      {date}th {month} {hours}:{minutes}am
+      {date} {month}, {hours}:{minutes}
     </div>
   );
 }
