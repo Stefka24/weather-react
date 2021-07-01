@@ -14,14 +14,10 @@ export default function DailyForecast(props) {
     return days[day];
   }
   return (
-    <div className="DailyForecast">
-      <div className="row">
-        <div className="col">
-          <div> {day()} </div>
-          <WeatherIcon code={props.data.weather[0].icon} size={35} />
-          <div> {temperature()}℃</div>
-        </div>
-      </div>
+    <div className="col">
+      <div> {day()} </div>
+      <WeatherIcon code={props.data.weather[0].icon} size={35} />
+      <div> {temperature()}℃</div>
     </div>
   );
 }

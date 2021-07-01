@@ -11,7 +11,22 @@ export default function WeeklyForecast(props) {
   }
 
   if (loaded) {
-    return <DailyForecast data={forecast[0]} />;
+    return (
+      <div className="WeeklyForecast">
+        <div className="row">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  {" "}
+                  <DailyForecast data={dailyForecast} />
+                </div>
+              );
+            }
+          })}{" "}
+        </div>
+      </div>
+    );
   } else {
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
