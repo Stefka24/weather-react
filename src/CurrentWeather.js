@@ -59,7 +59,7 @@ export default function CurrentWeather(props) {
                 ℃{" "}
               </a>
               | ℉
-              <WeatherIcon code={props.data.icon} />
+              <WeatherIcon code={props.data.icon} size={56} />
             </div>
           </div>
         </h1>
