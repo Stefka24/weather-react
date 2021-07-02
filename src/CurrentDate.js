@@ -26,9 +26,6 @@ export default function CurrentDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  if (date < 10) {
-    date = `0${date}`;
-  }
 
   return (
     <div>

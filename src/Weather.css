@@ -1,16 +1,25 @@
-.Weather form {
-  margin: 20px 0;
-  font-size: 20px;
+.Weather .col-6 {
+  padding: 0 10px;
 }
-
+.Weather .col-3 {
+  padding: 0;
+}
 .Weather .searchButton {
   background-color: #596aca;
   border-radius: 5px;
   color: white;
+  padding: 5px 10px;
 }
-
+.Weather .formInput {
+  margin: 0 auto;
+  width: 100%;
+  border-color: #99a5e6;
+  border-radius: 5px;
+  padding: 5px;
+}
 .Weather .searchButton:hover {
   background-color: white;
   border-radius: 5px;
+  padding: 5px 10px;
   color: #596aca;
 }
